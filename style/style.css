@@ -1,0 +1,143 @@
+*{
+  margin:0;
+  padding:0;
+  transition: color .1s background-color .5;
+  color:inherit;
+  text-decoration: initial;
+  box-sizing: border-box ;
+}
+
+body{
+  --primary-color: #4fc6ce;
+  --accent-01:#dbdbdb;
+  --accent-02:#98b1ba;
+  --accent-03:#26333a;
+  --accent-04:#1a2328;
+
+  font-family:calibri, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent-04);
+  color: var(--accent-01);
+}
+
+.container{
+  max-width: 100%;
+  width: 60%;
+  min-width: 225px;
+  height: 40vh;
+  background-color: var(--accent-03);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--accent-01);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+.input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.input #date,#time{
+  color: rgb(4, 1, 21);
+  background-color: var(--accent-02);
+  border-radius: 10px;
+  width: 7rem;
+  border: none;
+  font-size: 1.2em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+.input #date:active,#time:active,#btn:active{
+  outline: none;
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+#btn{
+  color:  rgb(4, 1, 21);
+  font-size: 1.2em;
+  width: 50px;
+  background-color: var(--accent-02);
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+.header{
+  margin: 10px 0;
+}
+
+
+section{
+  
+  margin-top: 20px;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.box{
+  background-color: var(--accent-04);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.progress-bar progress {
+  width: 100%;
+  appearance: none;
+  height: 10px;
+  margin-top: 20px;
+}
+
+.progress-bar progress::-webkit-progress-bar{
+  border-radius: 10px;
+  background-color: var(--accent-04);
+}
+
+.progress-bar progress::-webkit-progress-value{
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+
+
+
+@media screen and (width <=769px){
+  .container{
+    width: 90%;
+    height: auto;
+  }
+  section{
+    grid-template-columns: repeat(1,1fr);
+  }
+  #btn{
+    width: 40px;
+  }
+}
+
+
+@media screen and (width >=769px){
+  .container{
+    width: 60%;
+    height: 40vh;
+  }
+
+  .progress-bar progress {
+    width: 100%;
+    appearance: none;
+    height: 10px;
+    margin-top: 50px;
+  }
+  
+}
+

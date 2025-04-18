@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link  rel="icon" type="image/png" href="favicon.svg">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="input">
+      <input type="date" id="date" value="2025-01-01">
+      <input type="time" id="time" value="13:00">
+      <button id="btn">Set</button>
+    </div>
+
+    <div class="header">
+      <h2>Countdown Timer</h2>
+    </div>
+    
+    <section>
+      <div class="box">
+        <div>
+          <span class="day">00</span>
+          <span>days</span>
+        </div>
+      </div>
+      <div class="box">
+        <div>
+          <span class="hr">00</span>
+          <span>hours</span>
+        </div>
+        
+      </div>
+      <div class="box">
+        <div>
+          <span class="min">00</span>
+        <span>mintues</span>
+        </div>
+      </div>
+      <div class="box">
+        <div>
+          <span class="sec">00</span>
+        <span>seconds</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="progress-bar">
+      <progress class="pr"  max="100" value="0"></progress>
+    </div>
+
+  </div>
+  <script src="script/newdate.js"></script>
+</body>
+</html>
