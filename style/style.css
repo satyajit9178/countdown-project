@@ -110,6 +110,15 @@ section{
   background-color: var(--primary-color);
 }
 
+.status{
+  color: aliceblue;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 
 @media screen and (width <=769px){
