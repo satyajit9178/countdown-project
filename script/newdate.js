@@ -28,8 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (timeRemaining <= 0) {
         clearInterval(interval);
-        document.querySelector('section').innerHTML = "EXPIRED";
-        document.querySelector('.pr').value = 100;
+          document.querySelector('.day').textContent ='00';
+          document.querySelector('.hr').textContent = '00';
+          document.querySelector('.min').textContent = '00';
+          document.querySelector('.sec').textContent = '00';
+          document.querySelector('.pr').value = 100;
+          document.querySelector('.status').textContent = "EXPIRED";
+       
         return;
       }
 
@@ -37,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const hours = Math.floor((timeRemaining % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
       const minutes = Math.floor((timeRemaining % (60 * 60 * 1000)) / (60 * 1000));
       const seconds = Math.floor((timeRemaining % (60 * 1000)) / 1000);
+      document.querySelector('.status').textContent = "";
 
       document.querySelector('.day').textContent = days;
       document.querySelector('.hr').textContent = hours;
