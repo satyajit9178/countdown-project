@@ -23,6 +23,21 @@ body{
   align-items: center;
   background-color: var(--accent-04);
   color: var(--accent-01);
+  background: url(../image/background-img.avif);
+  background-size: cover;
+  background-position: center;
+}
+
+.background-1{
+  position: absolute;
+  top:0;
+}
+
+.background-2{
+  margin-left: 10px;
+  position: absolute;
+  left: 0;
+  top:10%;
 }
 
 .container{
@@ -30,12 +45,12 @@ body{
   width: 60%;
   min-width: 225px;
   height: 40vh;
-  background-color: var(--accent-03);
   padding: 20px;
   border-radius: 10px;
   color: var(--accent-01);
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .input{
@@ -49,9 +64,10 @@ body{
   color: rgb(4, 1, 21);
   background-color: var(--accent-02);
   border-radius: 10px;
-  width: 7rem;
+  width: 10rem;
   border: none;
-  font-size: 1.2em;
+  font-size: 1.2em; 
+  font-weight: bold;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   cursor: pointer;
 }
@@ -64,6 +80,7 @@ body{
 #btn{
   color:  rgb(4, 1, 21);
   font-size: 1.2em;
+  font-weight: bold;
   width: 50px;
   background-color: var(--accent-02);
   border-radius: 10px;
@@ -93,6 +110,11 @@ section{
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+.day,.hr,.min,.sec{
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
 .progress-bar progress {
   width: 100%;
   appearance: none;
@@ -119,27 +141,29 @@ section{
   align-items: center;
 }
 
-
-
-@media screen and (width <=769px){
-  .container{
-    width: 90%;
-    height: auto;
-  }
-  section{
-    grid-template-columns: repeat(1,1fr);
-  }
-  #btn{
-    width: 50%;
-    font-size: 1em;
-  }
-  .input #date,
-  .input #time{
-    width: 10rem;
-    font-size: 1em; 
-  }
- 
+.rocket-launch{
+  width: 250px;
+  position: absolute;
+  right: 5%;
+  animation: rocket-speed 4s linear 0.1s infinite;
 }
+
+.rocket{
+  width: 250px;
+}
+
+@keyframes rocket-speed{
+  0%{
+    bottom: 0;
+    opacity: 0;
+   
+  }
+  100%{
+    bottom: 150%;
+    opacity: 1;
+  }
+}
+
 
 
 @media screen and (width >=769px){
@@ -158,3 +182,54 @@ section{
   
 }
 
+
+/*-------------*/
+
+@media(max-width: 768px) {
+  .rocket{
+    width: 150px;
+  }
+  .container{
+    width: 90%;
+    height: auto;
+  }
+  section{
+    grid-template-columns: repeat(1,1fr);
+  }
+  #btn{
+    width: 50%;
+    font-size: 1em;
+  }
+  .input #date,
+  .input #time{
+    width: 10rem;
+    font-size: 1em; 
+  }
+  
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .rocket{
+    width: 200px;
+  }
+  #date,#time{
+    width: 10rem;
+    font-size: 1.2em; 
+  }
+  
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  
+  .rocket{
+    width: 230px;
+  }
+}
+
+
+.colored-1{
+  color: var(--primary-color);
+}
+.colored-2{
+  color: #FF0B55
+}
